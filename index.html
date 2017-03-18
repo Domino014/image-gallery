@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<title>Emission Time Auto Repair &amp; Maintenance</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">>
+<link rel="stylesheet" href="CSS/styles.css">
+<script
+  src="https://code.jquery.com/jquery-3.2.0.min.js"
+  integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<!-- Latest compiled and minified bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--app.js file -->
+<script src="JS/app.js"></script>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidenav/menu -->
+<nav class="w3-sidenav w3-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold" id="mySidenav"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-padding-xlarge w3-hide-large w3-display-topleft w3-hover-white" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Emission<br>Time</b><hr></h3>
+  </div>
+  <a href="#" onclick="w3_close()" class="w3-padding w3-hover-white">Home</a>
+  <a href="#showcase" onclick="w3_close()" class="w3-padding w3-hover-white">Locations</a>
+  <a href="#services" onclick="w3_close()" class="w3-padding w3-hover-white">Services</a>
+  <a href="#designers" onclick="w3_close()" class="w3-padding w3-hover-white">Pricing</a>
+  <a href="Views/deals.html" onclick="w3_close()" class="w3-padding w3-hover-white">Specials</a>
+  <a href="#contact" onclick="w3_close()" class="w3-padding w3-hover-white">Contact</a>
+</nav>
+<!-- adding a comment -->
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-btn w3-red w3-border w3-border-white w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Emission Time</span>
+</header>
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Emissions / Inspections</b></h1>
+    <h1 class="w3-xxxlarge w3-text-grey"><b>&amp; Automotive Repair</b></h1>
+    <hr style="width:50px;border:5px " class="w3-round">
+  </div>
+
+  <!-- Photo grid (modal) -->
+  <div>
+      <div class= "gallery col-sm-3" style="background-image:url('http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2015/12/Car-Emissions-in-Milan-Italy-889x547.jpg')" alt="smog station"></div>
+      <div class="gallery col-sm-3" style="background-image:url('http://www.tomorrowstechnician.com/wp-content/uploads/2015/10/Serpentine-belt-inspection.jpg')" alt="Drive Belt Replacement"></div>
+      <div class ="gallery col-sm-3" style="background-image:url('http://tuscaloosatireandservice.com/images/display/956/Tuscaloosa%20Tire%20and%20Service-Brake-Repair.jpg')" alt="Tire rotation"></div>
+      <div class="gallery col-sm-3" style="background-image:url('http://www.glassamerica.net/wp-content/uploads/2015/12/glass-replacement-windscreen.jpg')" alt="automotive maintenance in Salt Lake City"></div>
+      <div class="gallery col-sm-3" style="background-image:url('https://img.grouponcdn.com/deal/cKkHDVMvGSRiioJMkJ6M/7j-1500x900/v1/c700x420.jpg')" alt="oil change"></div>
+      <div class="gallery col-sm-3" style="background-image:url('http://www.isaacsauto.com/images/maintenance.jpg')" alt="Auto repair"></div>
+</div>
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black w3-padding-0" onclick="this.style.display='none'">
+    <span class="w3-closebtn w3-text-white w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:520px">
+    <h1 class="w3-xxxlarge w3-text-grey"><b>Services.</b></h1>
+    <hr style="width:50px;border:5px solid grey" class="w3-round">
+    <p>Emission Time is a local smog station and auto repair shop. We are committed to maintaining your vehicle without breaking your bank. We focus on Quality/Efficiency/Customer Service</p>
+    <p>Not only do we have two inspection locations at our Salt Lake City &amp; Sandy shops, but Emission Time does auto engine tune-ups:</p>
+<ul>
+ <li>Emission &amp; Inspection</li>
+ <li>On the Spot DMV Sticker Renewal</li>
+ <li>Express Oil Change</li>
+ <li>Brake Repair</li>
+ <li>Windshield Replacement</li>
+ <li>Headlight Restoration</li>
+ <li>Engine Flush</li>
+ <li>Belts Replacement</li>
+ <li>Rock Chip Repair</li>
+ </ul>
+
+<h2>Emission and Safety Inspection</h2>
+
+<p>Not sure if your vehicle needs emission testing, safety inspection, or both? Go to Utah’s DMV page for more information: Utah DMV Inspection Guidelines</p>
+<p>We test over 1000 cars EACH MONTH! Our friendly team will test and inspect your car that won’t have time to finish reading the short article you started in our waiting room! As much as we love you, we want to keep your stay with us as short as possible. In most cases you’ll be done and out of our store within 20 minutes of your arrival.</p>
+  <!-- Locations -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-grey"><b>Locations.</b></h1>
+    <hr style="width:50px;border:5px solid grey" class="w3-round">
+    <p>Two Auto Repair Locations in SLC | Sandy</p>
+    <p>Emission Time is a local and family-owned business. We strive to offer quality service at exceptional prices. Our goal is to help prolong the life of your vehicle. You can find us in Sandy and Salt Lake City.
+       </p>
+    <p><b>We are convenienlty located off of the freeway</b>:</p>
+  </div>
+
+  <!-- Locations-->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container" style="width: 100%">
+          <h3>Salt Lake City Location</h3>
+          <p class="w3-opacity">15 minute Smog Check</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193378.58365329012!2d-112.14914718663023!3d40.77213295322012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87528ac3b19afd95%3A0x4c09b6dfdd9ea1e6!2sEmission+Time!5e0!3m2!1sen!2sus!4v1482207572632" width="90%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+         <address><br><b>(801) 466-5434</b><br>
+      2432 South State Suite B
+      South Salt Lake, Utah 84115</address>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container" style="width:100%">
+          <h3>Sandy Location</h3>
+          <p class="w3-opacity">Smog & Safety Inspection</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193379.6041981646!2d-112.14914678996236!3d40.771782302131555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752887037ef4069%3A0x12c9149e05205e37!2sEmission+Time!5e0!3m2!1sen!2sus!4v1482207529152" width="90%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+         <address>
+      <br><b>(801) 948-4048</b><br>
+      32 East 9000 South
+      Sandy, Utah 84070
+      </address>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <!-- <div class="w3-container" style="width:100%"> -->
+          <form class="w3-container" action="mailto:emissiontimesocial@gmail.com" method="post" enctype="text/plain">
+            Send us an Email!<br>
+            Name:<br>
+            <input type="text" name="name"><br>
+            E-mail:<br>
+            <input type="text" name="mail"><br>
+            Comment:<br>
+            <input type="text" name="comment" size="50"><br><br>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+            <br>
+            <br>
+          </form>
+        <!-- </div> -->
+      </div>
+    </div>
+    <!-- put form here -->
+
+    </div>
+  </div>
+  <!--Accordion-->
+        <div id="accordion" class="w3-container">
+          <ul>
+            <li>
+              <a href="#one">Example one</a>
+              <div id="one" class="accordion">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet in laborum praesentium esse aliquam molestiae animi non facilis perspiciatis corporis ad molestias quo harum suscipit ipsum incidunt ea voluptates accusantium.
+              </div>
+            </li>
+            <li>
+              <a href="#two">Example two</a>
+              <div id="two" class="accordion">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet in laborum praesentium esse aliquam molestiae animi non facilis perspiciatis corporis ad molestias quo harum suscipit ipsum incidunt ea voluptates accusantium.
+              </div>
+            </li>
+            <li>
+              <a href="#three">Example three</a>
+              <div id="three" class="accordion">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet in laborum praesentium esse aliquam molestiae animi non facilis perspiciatis corporis ad molestias quo harum suscipit ipsum incidunt ea voluptates accusantium.
+              </div>
+            </li>
+          </ul>
+        </div>
+  </div>
+
+
+
+</div>
+</div>
+</div>
+
+
+
+<script>
+// Script to open and close sidenav
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+<div class="centered">
+  <h2>This is text to be centered</h2>
+</div>
+<div class="container">
+  <div class="redbox"></div>
+  <div class="redbox"></div>
+  <div class="redbox"></div>
+  <div class="redbox"></div>
+  <div class="redbox"></div>
+  <div class="redbox"></div>
+  <div class="redbox"></div>
+  <div class="redbox"></div>
+</div>
+<div class="row">
+  <div class="col-md-12 box">
+  this is some content
+  </div>
+    <div class="col-md-4 box">
+  this is some content
+  </div>
+    <div class="col-md-4 box">
+  this is some content
+  </div>
+</div>
+<div class= "spacer">
+</div>
+</body>
+</html> -->

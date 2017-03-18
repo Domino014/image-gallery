@@ -1,0 +1,54 @@
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2500);    
+}
+
+
+
+var images = ["http://bahaaaaal.com/wp-content/uploads/2013/01/siam-food-gallery.jpg","http://images.sciencedaily.com/2013/03/130307124701-large.jpg"] // sample images
+function drawSlice(startAngle, i) {
+	var canvasNode = document.getElementById('wheel');
+	var ctx = canvasNode.getContext('2d');
+	var image = new Image();
+	image.onload = function() {
+		ctx.drawImage(image, startX - 250, startY - 250);
+		ctx.restore();
+		ctx.stroke();
+	};
+	image.src = images[i];
+	var startX = 250;
+	var startY = 250;
+	ctx.clearRect (0,0,500,500);
+	var radius = 200;
+	var arc = Math.PI / 6;
+	var angle = startAngle + i * arc;
+	ctx.beginPath();
+	ctx.moveTo(startX, startY);
+	ctx.arc(startX, startY, radius, angle, angle + arc, false);
+	ctx.arc(250, 250, 1, angle + arc, angle, true);
+	ctx.save();
+	ctx.fillStyle = "black";
+	ctx.fill();
+	ctx.clip();
+}
+var qty = 2500;
+var counter = 1;
+function next() {
+	if (counter < qty) {
+		drawSlice(counter, 0);
+		drawSlice(counter, 1);
+		setTimeout(next, 1000);
+		counter++;
+	}
+}
+next();
